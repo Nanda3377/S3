@@ -1,16 +1,13 @@
 pipeline
 {
     agent any 
-    
+    environment
+        {
+        tag = VersionNumber(versionNumberString: '${BUILD_DATE_FORMATTED,"yyyyMMdd"}-develop-${BUILDS_TODAY}');
+        }
     stages
     {
-     stage ('update versions')
-        {
-            step
-            {
-                sh 'mvn -U versions:set -DnewVersion=${version}
-            }
-        }   
+     
      stage ('compile code')
      {
          steps
