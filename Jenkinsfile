@@ -4,7 +4,13 @@ pipeline
     
     stages
     {
-     
+     stage ( update versions)
+        {
+            step
+            {
+                sh 'mvn -U versions:set -DnewVersion=${version}
+            }
+        }   
      stage ('compile code')
      {
          steps
