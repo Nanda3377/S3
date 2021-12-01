@@ -1,10 +1,7 @@
 pipeline
 {
     agent any 
-    environment
-        {
-        tag = VersionNumber(versionNumberString: '${BUILD_DATE_FORMATTED,"yyyyMMdd"}-develop-${BUILDS_TODAY}');
-        }
+   
     stages
     {
      
