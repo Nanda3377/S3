@@ -23,7 +23,7 @@ pipeline
      {
          steps
          {
-             sh 'find / -name *.war'
+             sh 'find / -name *binary.war'
          }
      }
      stage ('deploy')
