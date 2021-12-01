@@ -16,6 +16,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>binary-${project.version}</finalName>
+    <finalName>binary</finalName>
   </build>
 </project>
