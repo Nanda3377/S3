@@ -27,6 +27,13 @@ pipeline
              sh 'cp -R /root/.jenkins/workspace/descriptive/target/* /opt/apache-tomcat-8.5.3/webapps'
          }
      }
+        stage ('update versions')
+        {
+            steps
+            {
+                sh 'mvn -U versions:set -DnewVersion=${version}'
+            }
+        }    
     stage ('connect to S3')
         {
             steps
