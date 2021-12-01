@@ -19,13 +19,7 @@ pipeline
              sh 'mvn test'
          }
      }
-     stage ('find my binary')
-     {
-         steps
-         {
-             sh 'find / -name *binary.war'
-         }
-     }
+    
      stage ('deploy')
      {
          steps
