@@ -4,7 +4,7 @@ pipeline
     
     stages
     {
-     stage ( update versions)
+     stage ('update versions')
         {
             step
             {
